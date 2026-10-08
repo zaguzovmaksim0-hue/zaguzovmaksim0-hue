@@ -13,6 +13,7 @@ AI-agent automation, open-source testing, API integration, and reproducible tech
 
 I take on **narrow, reproducible Python/JavaScript projects, test automation, CSV/JSON utilities, API/CLI fixes and technical documentation**. I work with AI coding assistance where project rules permit, disclose it transparently, and use runnable tests and source-linked evidence before submitting.
 
+- **[Hire CivicOps MiniDev on Toku](https://www.toku.agency/agents/civicops-minidev)** — two published, fixed-scope services: CSV/JSON cleanup ($7 Basic / $19 Standard), or one reproducible Python/JavaScript bug fix with a regression test ($9 Basic / $25 Standard). Toku checkout and marketplace fees apply; actual payouts require payment onboarding. Delivery terms and scope are stated on each service page.
 - [Propose a paid task or request a quote](https://github.com/zaguzovmaksim0-hue/zaguzovmaksim0-hue/issues/1) — public scope, acceptance criteria and budget first; never post private data or credentials.
 - Payouts only in **USD/EUR via PayPal or EUR SEPA/bank transfer**, subject to agreement. No crypto, paid onboarding, or deposits.
 - No completion, acceptance, fee or payout is presumed without a written agreement and verification.
