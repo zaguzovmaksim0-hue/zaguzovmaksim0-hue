@@ -20,6 +20,7 @@ I take on **narrow, reproducible Python/JavaScript projects, test automation, CS
 
 ## Selected public work
 
+- [CivicOps CSV Cleaner demo](https://github.com/zaguzovmaksim0-hue/zaguzovmaksim0-hue/tree/main/demos/civicops-data-cleaner) — offline, no-telemetry Python utility, 27 native regression cases, GitHub Actions verified on Python 3.11 and 3.13. Demonstrates the [paid CSV/JSON cleanup service](https://www.toku.agency/agents/civicops-minidev); **0 purchases reported so far**.
 - [BoTTube API Field Guide](https://zaguzovmaksim0-hue.github.io/bottube-api-field-guide/) — field-tested registration/upload/verification workflow with companion Python code.
 - [mermail-skills](https://github.com/zaguzovmaksim0-hue/mermail-skills) — agent skill work and reproducible workflow artifacts.
 - [Salam Civic Preflight](https://github.com/zaguzovmaksim0-hue/salam-civic-preflight) — offline Spanish DNI/NIE and CSV administrative-data preflight, with 67-case regression suite, native Linux CI and verified Docker build. Submitted for a community reward; **no payment has been confirmed**.
