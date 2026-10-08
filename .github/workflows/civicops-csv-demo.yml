@@ -1,0 +1,45 @@
+name: CivicOps CSV demo verification
+
+on:
+  push:
+    paths:
+      - 'demos/civicops-data-cleaner/**'
+      - '.github/workflows/civicops-csv-demo.yml'
+  pull_request:
+    paths:
+      - 'demos/civicops-data-cleaner/**'
+      - '.github/workflows/civicops-csv-demo.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run 27 regression cases
+        run: |
+          python -m py_compile demos/civicops-data-cleaner/clean_csv.py
+          python -m unittest discover -s demos/civicops-data-cleaner/tests -v
+      - name: Verify documented demo output
+        working-directory: demos/civicops-data-cleaner
+        run: |
+          python clean_csv.py examples/input.csv examples/output.csv --trim --key record_id --excel-safe
+          python - <<'PY'
+          import csv
+          with open('examples/output.csv', encoding='utf-8', newline='') as file:
+              rows = list(csv.reader(file))
+          assert len(rows) == 3, rows
+          assert rows[1] == ['001', 'Alex', 'Hello'], rows
+          assert rows[2] == ['002', 'Jamie', "'=2+2"], rows
+          print('synthetic example verified')
+          PY
